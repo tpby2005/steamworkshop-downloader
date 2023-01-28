@@ -37,7 +37,7 @@ int main() {
         return -1;
     }
 
-    for (std::string i : downloadList) {
+    for (const std::string &i : downloadList) {
         std::string con = "C:\\steamcmd\\steamcmd.exe +login anonymous +workshop_download_item " + i + " +quit";
 
         system(con.c_str());
@@ -46,7 +46,7 @@ int main() {
     //move all to closer dir
     std::filesystem::remove_all("downloads");
 
-    std::filesystem::copy("C:\\steamcmd\\steamapps\\workshop", "downloads", std::filesystem::copy_options::recursive);
+    std::filesystem::copy(R"(C:\steamcmd\steamapps\workshop)", "downloads", std::filesystem::copy_options::recursive);
 
     return 0;
 }
