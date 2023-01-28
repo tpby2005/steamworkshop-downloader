@@ -12,6 +12,8 @@
 ### Note:
 You may only download workshop files for games that do not require steam login.
 
+**MUST USE C++17 OR LATER**, requires `std::filesystem`!!
+
 ### Todo:
 - [ ] Allow user login.
 - [ ] Auto-convert steam workshop URL to appid and workshopid.
